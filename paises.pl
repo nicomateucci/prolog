@@ -30,9 +30,12 @@ limitrofes(X,Y):- limita_con(X,Y); %OR
 pais_paqueno(X):- superficie_pais(X,Y),
 			Y < 1000000.
 
-$ todos los paises translimitrofes
+% todos los paises translimitrofes
 
 translimitrofes(X,Y):- limitrofes(X,Z),
  		       limitrofes(Z,Y),
 		       dif(X,Y),
 		       not(limitrofes(X,Y)).
+
+suma(0,X,X).
+suma(1,X, Res) :- Res is X + 1.
