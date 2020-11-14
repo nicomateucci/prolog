@@ -47,15 +47,18 @@ ej4:- Lista = [ nico, seba, 9,8,7,6,5,4,3,2,1],
 %5 Mostrar ultimo elemento
 
 ej5:- %write("Ingrese una lista de elementos: "), leer(Lista),
-    Lista = [ nico, seba, 9,8,7,6,5,4,3,2,1],
-    invertirLista(Lista, ListaInvertida), write("El ultimo elemento de la lista es: "), listarCabeza(ListaInvertida, _).
+    Lista = [ nico, seba, 9,8,7,6,5,4,3,2],
+    invertirLista(Lista, ListaInvertida), write("El ultimo elemento de la lista es: "), listarCabeza(ListaInvertida).
 
-listarCabeza([Cabeza | _], Cabeza) :-  write(Cabeza).
+listarCabeza([Cabeza | _]) :- write(Cabeza).
 
 invertirLista([],[]).
 invertirLista([Cabeza | Cola], ListaInvertida) :- invertirLista(Cola, ListaTemp),
-    append(Lista, [Cabeza], ListaConCabezaAlFinal).
+    append(ListaTemp, [Cabeza], ListaInvertida).
     % @Duda Porque si no pongo Cabeza entre corchetes no funciona.
+
+inversa_1([],[]).
+inversa_1([X|L1],L2) :- inversa_1(L1,L3), append(L3,[X],L2).
 
 % Lista de enteros y calcular diferencia entre primero y ultimo.
 ej6 :- write("Ingrese una lista de elementos: "), leer(Lista),

@@ -1,0 +1,12 @@
+:- dynamic animales/5.
+
+animal(perro, alimentación(carne, 1000), bebida(agua, 2000), 
+    reproducción('todo el año', 8), horasSueño(6)).
+
+animal(gato, alimentación(atun, 500), bebida(agua, 500), 
+    reproducción('todo el año', 5), horasSueño(8)).
+
+animal(paloma, alimentación(alpiste, 500), bebida(agua, 200), 
+    reproducción('todo el año', 6), horasSueño(5)).
+
+animal(paloma, alimentación(algas, 200), reproducción('todo el año', 6), horasSueño(5)).

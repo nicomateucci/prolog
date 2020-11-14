@@ -1,0 +1,7 @@
+:- dynamic libro/5.
+
+libro(1, 'El Hacedor', 'Jorge Luis Borges', 'Buenos Aires', 6000).
+libro(2, 'El Aleph', 'Jorge Luis Borges', 'Buenos Aires', 4500).
+libro(3, 'EL Puñal', 'Jorge Fernandez Diaz', 'Buenos Aires', 2000).
+libro(4, 'El Principito', 'Antoine de Sant Exuperi', argentina, 3500).
+
